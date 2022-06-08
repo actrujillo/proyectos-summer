@@ -1,0 +1,347 @@
+*{
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    color: #333 !important;
+    font-family: 'PT Sans', sans-serif !important;
+    font-weight: 700;
+}
+
+header{
+    background: #536dfe;
+    min-width: 100%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+}
+
+header nav{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+header nav a:link, a:visited{
+    font-family: 'Chelsea Market', cursive;
+    color: #fafafa;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.container-ppal{
+    margin: 0 auto;
+    background: #fafafa;
+}
+
+.welcome{
+    width: 100%;
+    height: calc(100vh - 11vh);
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.3s ease-in;
+}
+
+.welcome .texto{
+    width: 100%;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.texto h1{
+    font-size: 35px;
+    margin: 20px;
+}
+
+.texto h2{
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.texto span{
+    /* font-family: 'Indie Flower', cursive; */
+    font-style: italic;
+}
+
+.texto img{
+    width: 30%;
+    border-radius: 50%;
+}
+
+.welcome .boton{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.welcome button{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-ppal img{
+    width: 55px;
+    margin-right: 10px;
+}
+
+.btn-ppal img:hover{
+    width: 58px;
+}
+
+.mas{
+    height: calc(100vh - 9vh);
+    display: flex;
+    align-items: center;
+}
+
+.popup{
+    width: 80%;
+    height: calc(90vh - 12vh);
+    padding: 10px;
+    background: #ffa726;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px ;
+}
+
+.popup h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popup form{
+    text-align: center;
+    line-height: 30px;
+}
+
+.popup form select{
+    overflow: scroll;
+}
+
+.popup form select, .popup form textarea, .popup form input{
+    width: 80%;
+    margin: 5px;
+    border-radius: 5px;
+    padding-left: 4px;
+    resize: none;
+}
+
+.popup form button{
+    width: 60%;
+    background: #222;
+    color: #fafafa;
+    border-radius: 20px;
+    float: right;
+    margin-right: 10%;
+}
+
+.popup form p{
+    font-weight: 700;
+    color: #d50000;
+}
+
+.welcome .lista{
+    width: 100%;
+    height: calc(100vh - 12vh)
+}
+
+.lista{
+    flex-direction: column;
+    overflow: auto;
+}
+
+.lista ul{
+    margin-top: 10px;
+    padding: 0px;
+}
+
+.lista ul li{
+    width: 100%;
+    border: none;
+    background-color: #ffa726;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    list-style: none;
+    text-transform: capitalize;
+    box-shadow: 1px 1px 3px #bf360c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.lista ul li .icono{
+    width: 38px;
+}
+
+.lista ul li h4{
+    width: 100%;
+}
+
+.lista ul li .icono:hover{
+    padding: 2px;
+}
+
+.detalle{
+    width: 90%;
+    height: calc(100vh - 11vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detalle .lista-detalle{
+    width: 100%;
+    height: 50%;
+    background-color: #ffa726;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.lista-detalle .icono-detalle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono-detalle img{
+    width: 25%;
+    margin-left: 10px;
+}
+
+.icono-detalle .cerrar{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5b95f;
+    box-shadow: 1px 1px 2px #d50000;
+}
+
+.icono-detalle .cerrar:focus{
+    width: 26px;
+    height: 26px;
+}
+
+@media (min-width: 549.98px){
+    header{
+        height: 11vh;
+    }
+}    
+
+@media (min-width: 767.98px){
+    header nav a:link, a:visited{
+        font-size: 24px;
+    }
+}
+
+@media (min-height: 890.98px){
+    .popup{
+        height: 70vh;
+    }
+    
+    .popup form select, .popup form textarea, .popup form input{
+        width: 80%;
+        margin: 8px;
+        border-radius: 5px;
+    }
+
+    .popup form button{
+        margin-top: 20px;
+    }
+
+    .texto{
+        margin-top: 20px;
+    }
+    
+    .texto h1{
+        font-size: 50px;
+    }
+
+    .texto h2{
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    .texto img{
+        margin: 55px;
+        width: 45%;
+    }
+
+    .welcome button{
+        margin-top: 20px;
+    }
+
+    .popup form h2{
+        font-size: 35px;
+    }
+
+    .popup form{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 599.98px){
+    header nav{
+        width: 100%;
+        display: inline;
+    }
+
+    nav a:link, nav a:visited{
+        margin-left: 20px;
+    }
+}
+
+
+@media (min-width: 923.98px){
+    
+    nav a:link, nav a:visited{
+        margin-left: 50px;
+    }
+
+    .welcome .boton{
+        display: none;
+    }
+
+    .welcome .texto img{
+        width: 20%;
+    }
+
+    .container-ppal{
+        display: flex;
+    }
+
+    .welcome{
+        display: flex;
+    }
+
+    .mas{
+        display: flex !important;
+        height: 88vh;
+    }
+    
+    .detalle{
+        width: 50%;
+    }
+}
