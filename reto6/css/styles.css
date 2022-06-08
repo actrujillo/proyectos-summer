@@ -1,0 +1,360 @@
+:root {
+    --first: #263238;
+    --second: #fafafa;
+    --third: #8c9eff;
+    --fourth: #b0bec5;
+    --fifth: #37474f;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+}
+
+.container-ppal{
+    background: var(--first);
+    color: var(--second);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'AmericanTypewriter';
+}
+
+.welcome, .loading, .imagenes, .popup, .resultados{
+    align-items: center;
+    width: 360px !important;
+    height: 100vh;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-ppal, .jugadores, .btn-jugar, .partidas{
+    margin-top:20px;
+}
+
+.container-uno{
+    width: 80%;
+}
+
+.container-uno form{
+    display: flex;
+    flex-direction: column;
+}
+
+.jugadores label, .jugadores input{
+    border: none;
+    border-radius: 5px;    
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+form button{
+    background-color: var(--third);
+    border-radius: 10px;
+    color: var(--first);
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+.mensaje{
+    color: red;
+    font-size: 12px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.loading{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loading img{
+    border-radius: 50%;
+    
+}
+
+.col-8{
+    margin-top: 20px !important;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+.imagenes .cerrar{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    position: absolute;
+}
+
+.imagenes .cerrar:hover{
+    font-size: 12px;
+}
+
+.imagenes h2{
+    font-size: 18px;
+    padding: 5px;
+}
+
+.imagenes h3{
+    padding-top: 8px;
+    font-size: 15px;
+}
+
+.imagenes p{
+    font-size: 13px;
+    height: 165px;
+    margin-top: 8px;
+    text-align: justify;
+}
+
+.row{
+    margin: 0;
+    padding-right: 0 !important;
+    max-width: 100%;
+}
+
+.row, .col-8, .col-2{
+    max-height: 100%;
+}
+
+.carousel-item img{
+    border-radius: 5px;
+    border: 6px solid var(--fifth);
+}
+
+.popup{
+    background: var(--fifth);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.opciones{
+    background: var(--first);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    width: 80%;
+    margin-top: 50px;
+}
+
+.opciones button{
+    background:var(--fourth);
+    border: none;
+    border-radius: 10px;
+    color: var(--first);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    width: 80%;
+}
+
+.opciones button:hover{
+    background-color: var(--second);
+}
+
+.resultados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.resultados span{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.partidas{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+}
+
+.anteriores{
+    display: flex;
+    border: 2px solid var(--fifth);
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+    width: 100%;
+}
+
+.anteriores p{
+    display: flex;
+    height: 100%;
+    margin: 0px;
+}
+
+.anteriores button{
+    background: var(--third);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 30px;
+}
+
+.resultados-player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cartas-player2{
+    margin-top: 10px;
+}
+
+.cartas-player1 img, .cartas-player2 img{
+    border: 2px solid var(--fifth);
+    border-radius: 10%;
+    margin: 10px 0px;
+    width: 30%;
+}
+
+.cartas-player1 h3, .cartas-player2 h3{
+    background: var(--fifth);
+    font-size: 18px;
+}
+
+.resultados-img{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-resultados{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.btn-resultados button{
+    background-color: var(--third);
+    border-radius: 10px;
+    color: var(--first);
+    height: 40px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.match{
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.match h3{
+    font-style: normal;
+}
+
+@media (min-width: 499.97px){
+    .welcome, .loading, .imagenes, .popup, .resultados{
+        width: 70% !important;
+    }
+
+    .imagenes .cerrar{
+        width: 60%;
+    }
+}
+
+@media (min-width: 574.97px){
+    .imagenes{
+        height: 100vh;
+        width: 50% !important;
+    }
+    
+    .welcome, .loading, .popup, .resultados{
+        width: 50% !important;
+        height: 100vh;
+    }
+
+    .col-2{
+        display: none;
+    }
+
+    .imagenes .cerrar{
+        width: 40%;
+    }
+
+    .btn-resultados{
+        margin-top: 10px;
+        margin-bottom: -25px;
+    }
+}
+
+@media (min-width: 654.97px){
+    .welcome, .imagenes{
+        height: 100vh;
+        width: 40% !important;
+    }
+    
+    .loading, .popup, .resultados{
+        height: 70vh;
+        width: 40% !important;
+    }
+
+    .carousel-item p{
+        height: 120px;
+    }
+
+    .match h3{
+        font-size: 30px;
+    }
+
+    .match p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 934.97px){
+    .imagenes{
+        height: 100vh;
+        width: 35% !important;
+
+    }
+    
+    .welcome, .loading, .popup, .resultados{
+        width: 35% !important;
+    }
+    .imagenes .cerrar{
+        width: 30%;
+    }
+}
+
+@media (min-height: 600.97px){
+    .welcome, .popup, .imagenes{
+        height: 100vh;
+    }
+
+    .loading, .resultados{
+        height: 60vh;
+    }
+
+}   

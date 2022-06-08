@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jueguito de The Office</title>
+    <meta name="description" content="Este es un juego donde los participantes pueden hacer match en base a los personajes de la iconica serie The Office ✔" />
+    <meta name="keywords" content="juego, game, match, the office, michael scott, coincidencia" />
+    <meta name="author" content="Ariel Trujillo" />
+    <meta name="copyright" content="Truman 2022" />
+    <!-- ROBOTS -->
+    <meta name="robots" content="index follow" />
+    <link rel="icon" href="images/favicon.jpg" type="image/jpg" />
+    <meta property="og:title" content="Juego de The Office by Truman" />
+    <meta property="og:description" content="Juego de personajes match de The Office" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://summerhack-22.web.app/images/backgroundmichi.jpg"/>
+    <meta property="og:url" content="../reto6/images/favicon.jpg"/>
+    <meta property="twitter:title" content="Juego de The Office by Truman" />
+    <meta property="twitter:description" content="Juego de personajes match de The Office"  />
+    <meta property="twitter:type" content="website" />
+    <meta property="twitter:image" content="../reto6/images/favicon.jpg" />
+    <meta property="twitter:url" content="https://summerhack-22.web.app/reto6/index.html" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-ppal">
+        <section class="welcome">
+            <div class="container-uno">
+                <div class="titulo-ppal">
+                    <h1>Juego de The Office</h1>
+                </div>
+                <div class="jugadores">
+                    <form action="#" typ>
+                        <label for="nombre1">Player 1</label>                       
+                        <input type="text" id="player1" placeholder="Ingrese su nombre o alias" required>
+                        <label for="nombre2">Player 2</label>                       
+                        <input type="text" id="player2" placeholder="Ingrese su nombre o alias" required>
+                        <button type="button" id="btn-ppal">¿Vamos a jugar?</button>
+                        <p class="mensaje"></p>
+                    </form>  
+                </div>
+                <div style="display: none;" class="juegosAnteriores">
+                    <h3>Juegos anteriores</h3>
+                    <ul class="partidas"></ul>
+                </div>
+            </div>
+        </section>
+        <section class="loading" style="display: none;">
+            <img src="images/loading.gif" alt="imagen de espera">
+            <h3>Analizando resultados</h3>
+        </section>
+        <section class="imagenes" style="display: none;">
+            <div class="row d-flex justify-content-center">
+                <span class="cerrar">X</span>
+                <div class="col-2"></div>
+                <div class="col-8 align-middle">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 5"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 6"></button>                            
+                            </div> -->
+                            <div class="carousel-item active">
+                                <h2 class="nombrePlayer1"></h2>
+                                <img src="" class="d-block w-100 img1" alt="imagen del personaje">
+                                <h3 id="titulo1"></h3>
+                                <p id="texto1"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h2 class="nombrePlayer2"></h2>
+                                <img src="" class="d-block w-100 img2" alt="imagen del personaje">
+                                <h3 id="titulo2"></h3>
+                                <p id="texto2"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h2 class="nombrePlayer3"></h2>
+                                <img src="" class="d-block w-100 img3" alt="imagen del personaje">
+                                <h3 id="titulo3"></h3>
+                                <p id="texto3"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h2 class="nombrePlayer4"></h2>
+                                <img src="" class="d-block w-100 img4" alt="imagen del personaje">
+                                <h3 id="titulo4"></h3>
+                                <p id="texto4"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h2 class="nombrePlayer5"></h2>
+                                <img src="" class="d-block w-100 img5" alt="imagen del personaje">
+                                <h3 id="titulo5"></h3>
+                                <p id="texto5"></p>
+                            </div>
+                            <div class="carousel-item">
+                                <h2 class="nombrePlayer6"></h2>
+                                <img src="" class="d-block w-100 img6" alt="imagen del personaje">
+                                <h3 id="titulo6"></h3>
+                                <p id="texto6"></p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-2 derecha"></div>
+            </div>
+        </section>
+        <section class="popup" style="display: none;">
+            <div class="opciones">
+                <button type="button" id="btnResultados">Ver resultados</button>
+                <button type="button" id="btnInicio">Volver a jugar</button>
+            </div>
+        </section>
+        <section class="resultados" style="display: none;">
+            <div class="resultados-player">
+                <div class="cartas-player1"></div>
+                <div class="cartas-player2"></div>
+                <div class="match"></div>
+            </div>
+            <div class="btn-resultados">
+                <button type="button" id="guardarJuego">Guardar</button>
+                <button type="button" id="cerrarResultado">Volver al Inicio</button>
+            </div>
+        </section>
+    </div> 
+
+    <script src="js/office.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
